@@ -23,7 +23,7 @@ function Display(props) {
     const [userList, setUserList] = useState([]);
    
     //updating song when user changes
-    const [countdown, setCountdown] = useState(15);
+    const [countdown, setCountdown] = useState(120);
     const [first, setFirst] = useState(false);
 
 
@@ -79,7 +79,7 @@ function Display(props) {
     }, [expiresIn, refreshToken]);
     
   
-
+//get data from users
   useEffect(()=>{
     if(!accessToken) return;
     const runFetchUserInfo = () => {
@@ -126,7 +126,7 @@ function Display(props) {
       fetchUsers();
       fetchData();
       setFirst(true);
-      setCountdown(15);
+      setCountdown(120);
     }
   }, [accessToken, countdown, user]);
   
