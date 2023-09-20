@@ -1,7 +1,7 @@
 
 const CLIENT_ID = 'feb8469a722140269123ab9f53988c75';
 const CLIENT_SECRET = 'cea6f92ef79246b7b874921ddfbf82f8';
-const URI = 'http://localhost:3000/';
+const URI = 'https://listen-six.vercel.app/';
 
 export async function exchangeCodeForToken(authCode) {
   const authParameters = new URLSearchParams();
