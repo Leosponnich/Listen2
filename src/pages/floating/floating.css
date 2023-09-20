@@ -1,0 +1,29 @@
+.floating-component {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    width: 300px;
+    background-color: #492665;
+    padding: 20px;
+    position: absolute;
+    border-radius: 50%;
+    color: aliceblue;
+    align-items: center;    
+    z-index: 100;
+    }
+  
+  
+  .floating-component:hover{
+    border: 1px solid white; 
+  }
+  
+  .floating-component-text{
+    display: flex;
+    flex-direction: column;
+  }
+    
+  .floating-component img{
+    border-radius: 50%;
+    height: 150px;
+    margin-right: 10px;
+  }

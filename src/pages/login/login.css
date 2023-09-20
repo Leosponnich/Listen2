@@ -1,0 +1,31 @@
+.main{
+    display: flex;
+    height: 100svh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.login_button{
+    padding: 24px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: transparent;
+    z-index: 200;
+}
+
+.login_button:hover{
+    border: 1px solid white;
+    color: white;
+}
+
+
+.floating-body{
+    height: 100svh;
+}
+
+.floating-body img{
+    height: 300px;
+    width: 300px;
+}

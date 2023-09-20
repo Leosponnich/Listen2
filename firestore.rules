@@ -1,0 +1,15 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /lobbies/{lobbyId} {
+      allow create: if request.auth != null; // Allows authenticated users to create lobbies
+      allow read: if request.auth != null; // Allows authenticated users to read lobbies
+      allow write: if request.auth != null && request.auth.uid == resource.data.creator_id; // Allows lobby creator to write
+    }
+    
+    match /lobbies/{lobbyId}/users/{userId} {
+      allow create: if request.auth != null && request.auth.uid == userId; // Allows adding self to lobby
+    }
+  }
+}

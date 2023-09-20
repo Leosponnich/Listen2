@@ -1,0 +1,106 @@
+.display-container{
+    height: 100svh;
+}
+
+.floating-body{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;  
+    align-items: center;
+    background-color: #3E1E68;
+    color: white;
+}
+
+.exit-button{
+    align-self: flex-end;    
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-bottom: 10svh;
+    border-radius: 25%;
+      
+}
+
+.floating-body-rows{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-body-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.floating-body-column{
+    text-align: center;
+}
+
+.floating-body-column h1{
+    font-size: 20px;
+    margin-bottom: -1svh;
+}
+
+.floating-body-column h2{
+    font-size: 16px;
+}
+
+
+.floating-body-column p{
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+.profile-img {
+    border-radius: 50%;
+    width: 150px !important;
+    height: 150px !important;
+    /* Add any additional styles you need */
+  }
+
+  .album-img {
+    width: 200px !important;
+    height: 200px !important;
+    /* Add any additional styles you need */
+  }
+
+
+.loading{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    z-index: 100;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .floating-body-rows{
+        flex-direction: column;
+    }
+
+    .exit-button{
+        margin-bottom: -5svh;
+    }
+    .profile-img{
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .album-img{
+        width: 150px  !important;
+        height: 150px !important;
+    }
+}
+
