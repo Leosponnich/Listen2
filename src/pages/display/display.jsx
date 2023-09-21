@@ -117,13 +117,13 @@ function Display(props) {
   
         setSong(isPlaying ? res : null);
         sendDataToFirebase(newObj);
+        fetchUsers();
       } catch (error) {
         console.error('Error fetching currently playing song:', error);
       }
     };
   
     if (!first || countdown === 0) {
-      fetchUsers();
       fetchData();
       setFirst(true);
       setCountdown(120);
