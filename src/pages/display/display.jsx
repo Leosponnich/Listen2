@@ -23,7 +23,7 @@ function Display(props) {
     const [userList, setUserList] = useState([]);
    
     //updating song when user changes
-    const [countdown, setCountdown] = useState(120);
+    const [countdown, setCountdown] = useState(30);
     const [first, setFirst] = useState(false);
 
 
@@ -117,7 +117,6 @@ function Display(props) {
   
         setSong(isPlaying ? res : null);
         sendDataToFirebase(newObj);
-        fetchUsers();
       } catch (error) {
         console.error('Error fetching currently playing song:', error);
       }
@@ -125,8 +124,9 @@ function Display(props) {
   
     if (!first || countdown === 0) {
       fetchData();
+      fetchUsers();
       setFirst(true);
-      setCountdown(120);
+      setCountdown(30);
     }
   }, [accessToken, countdown, user]);
   
